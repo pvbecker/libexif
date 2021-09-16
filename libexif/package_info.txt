@@ -1,0 +1,12 @@
+Package: libexif
+Version: 0.0-0
+Section: base
+Priority: optional
+Architecture: i386
+Depends: gcc
+Maintainer: Paulo Andrade <pevebecker@gmail.com>
+Description: libexif
+ This library is a first attempt on generating something like Phil Harvey's exiftool, but in both
+ static and shared library formats, in order to more easily have access to image metadata on certain
+ environments, when either we don't have access to exiftool's executable or don't want to pipe it's
+ output to our program.

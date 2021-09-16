@@ -1,0 +1,15 @@
+NOTAS DE AULA
+
+Tarefa:
+- Implementar uma biblioteca compartilhada em compartilhada.
+- Criar um makefile para essa lib.
+    o - Quem sabe um leitor de imagem/metadados de imagens.
+    o - Navegador de dados asn1?
+    o - Uma lib de estrutura de dados: lista ligada, arvore binária? esses, de tipos genéricos, para
+    ficar 'legal'.
+- Implementar um programa em linguagem C que utilize funcções da biblioteca compartilhada.
+- Criar um makefile para compilação do programa criado.
+- Gerar um pacote .deb para instalação da biblioteca compartilhada.
+- Gerar um pacote .deb para instalação do programa criado.
+
+Artifact libexif.so foi jogado em /usr/local/lib para compilações.
