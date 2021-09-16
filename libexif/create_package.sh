@@ -27,7 +27,7 @@ PACKAGE_INFO="Package: libexif
 Version: 0.0-0
 Section: base
 Priority: optional
-Architecture: i386
+Architecture: all
 Depends:
 Maintainer: Paulo Andrade <pevebecker@gmail.com>
 Description: libexif

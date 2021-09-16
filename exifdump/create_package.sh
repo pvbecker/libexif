@@ -27,7 +27,7 @@ PACKAGE_INFO="Package: exifdump
 Version: 0.0-0
 Section: base
 Priority: optional
-Architecture: i386
+Architecture: all
 Depends: libexif
 Maintainer: Paulo Andrade <pevebecker@gmail.com>
 Description: exifdump
