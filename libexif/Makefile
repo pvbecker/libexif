@@ -24,7 +24,7 @@ OBJS=$(subst $(SRC_DIR), $(OUT_DIR), $(patsubst $(SRC_DIR)/%.c, $(SRC_DIR)/%.o, 
 # source file).
 LIB_OBJS=$(filter-out $(SRC_DIR)/main.o, $(OBJS))
 
-EXECUTABLE=$(OUT_DIR)/test.elf
+EXECUTABLE=$(OUT_DIR)/test
 
 
 all: $(EXECUTABLE)
@@ -71,4 +71,8 @@ static: $(LIB_OBJS)
 shared: $(LIB_OBJS)
 	@echo creating dynamic library libexif.so...
 	$(CC) -shared $^ -o $(OUT_DIR)/libexif.so
+
+binary: $(OBJS)
+	@echo creating test executable...
+	$(CC) $^ -o $(OUT_DIR)/test
 
