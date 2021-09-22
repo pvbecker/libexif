@@ -21,7 +21,7 @@ make clean
 make shared
 cp build/libexif.so $PACKAGE_NAME/usr/local/lib
 
-echo "creating control file"
+echo "creating control file..."
 mkdir $PACKAGE_NAME/DEBIAN
 PACKAGE_INFO="Package: libexif
 Version: 0.0-0
@@ -36,6 +36,11 @@ Description: libexif
  environments, when either we don't have access to exiftool's executable or don't want to pipe it's
  output to our program."
 echo -e "$PACKAGE_INFO" > $PACKAGE_NAME/DEBIAN/control
+
+echo "creating postinst script file..."
+SCRIPT_DATA="sudo ldconfig"
+echo -e "$SCRIPT_DATA" > $PACKAGE_NAME/DEBIAN/postinst
+chmod +x $PACKAGE_NAME/DEBIAN/postinst
 
 dpkg-deb --build $PACKAGE_NAME
 
