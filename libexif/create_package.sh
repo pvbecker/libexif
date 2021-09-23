@@ -15,11 +15,13 @@ mkdir $PACKAGE_NAME
 mkdir $PACKAGE_NAME/usr
 mkdir $PACKAGE_NAME/usr/local
 mkdir $PACKAGE_NAME/usr/local/lib
+mkdir $PACKAGE_NAME/usr/local/include
 
 echo "guaranteeing a fresh build and that the target binaries will be in place..."
 make clean
 make shared
 cp build/libexif.so $PACKAGE_NAME/usr/local/lib
+cp src/inc/libexif.h $PACKAGE_NAME/usr/local/include
 
 echo "creating control file..."
 mkdir $PACKAGE_NAME/DEBIAN
